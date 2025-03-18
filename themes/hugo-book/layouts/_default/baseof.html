@@ -9,13 +9,13 @@
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
-      <div class="book-menu-content editable">
+      <div class="book-menu-content">
         {{ template "menu" . }} <!-- Left menu Content -->
       </div>
     </aside>
 
     <div class="book-page">
-      <header class="book-header editable">
+      <header class="book-header">
         {{ template "header" . }} <!-- Mobile layout header -->
       </header>
 
@@ -23,7 +23,7 @@
       {{ template "main" . }} <!-- Page Content -->
       {{ partial "docs/inject/content-after" . }}
 
-      <footer class="book-footer editable">
+      <footer class="book-footer">
         {{ template "footer" . }} <!-- Footer under page content -->
         {{ partial "docs/inject/footer" . }}
       </footer>
@@ -35,7 +35,7 @@
 
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
     <aside class="book-toc">
-      <div class="book-toc-content editable">
+      <div class="book-toc-content">
         {{ template "toc" . }} <!-- Table of Contents -->
       </div>
     </aside>
@@ -66,14 +66,14 @@
 
 {{ define "comments" }}
   {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
-  <div class="book-comments editable">
+  <div class="book-comments">
     {{- partial "docs/comments" . -}}
   </div>
   {{ end }}
 {{ end }}
 
 {{ define "main" }}
-  <article class="markdown book-article editable">
+  <article class="markdown book-article">
     {{- .Content -}}
   </article>
 {{ end }}
