@@ -74,7 +74,9 @@
 
 {{ define "main" }}
   <article class="markdown book-article">
-    {{- .Content -}}
+    <div class="editable">
+      {{- .Content -}}
+    </div>
   </article>
 {{ end }}
 
