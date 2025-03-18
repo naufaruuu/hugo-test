@@ -1,0 +1,15 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Sleep App - Kubernetes Resource Optimizer"
+theme = "hugo-book"
+
+# Disable taxonomy pages
+disableKinds = ['taxonomy', 'taxonomyTerm']
+
+[params]
+  # Theme settings
+  BookTheme = 'light'
+  BookToC = true
+  BookSection = 'docs'
+  BookSearch = true
+  BookComments = false
